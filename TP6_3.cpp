@@ -13,10 +13,35 @@
 
 using namespace std;
 
+struct ListNode {
+    int nlinea, ninterno, cantasientos;
+    ListNode *next;
+};
+
+
+
+void printList(ListNode *front) {
+
+    for (ListNode *ptr = front; ptr != nullptr; ptr = ptr->next) {
+        cout << ptr->nlinea << " ";
+    }
+
+}
+
+
+
+void addToFront(int elem1,int elem2,int elem3, ListNode* &front) {
+    front = new ListNode{elem1,elem2,elem3, front};
+
+    }
+
+
 
 int main () {
 
-    string discapacitados;
+    ListNode* front = new ListNode();
+
+
     int nlinea, ninterno, cantasientos;
     int fd;
     int p=0;
@@ -40,26 +65,36 @@ int main () {
     while (!p){
 
         cout<<("1. Agregar bondi")<<endl;
+        cout<<("2. Mostrar bondi")<<endl;
+
         scanf("%d", &opcion);
 
         switch (opcion){
 
-            case 1:
+            case 1: {
                 printf("Ingrese numero de linea: ");
                 scanf("%d", &nlinea);
-                write(fd, &nlinea, 13);
+                //write(fd, &nlinea, 13);
+                front->nlinea = nlinea;
+
 
                 printf("Ingrese numero de interno: ");
                 scanf("%d", &ninterno);
+                ListNode *front = new ListNode();
+                addToFront(ninterno, front);
 
 
                 printf("Ingrese numero de asientos: ");
                 scanf("%d", &cantasientos);
+                front->cantasientos = cantasientos;
 
-                printf("Ingrese si es APTO o NO APTO para discapacitados: ");
-                scanf("%s", &discapacitados);
-
-                
+                break;
+            }
+          case 2: {
+              printList(front);
+              break;
+          }
+x
         }
 
 
