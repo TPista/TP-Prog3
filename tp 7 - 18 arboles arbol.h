@@ -1,12 +1,20 @@
+// Created by tomas,carlos on 12/09/18.
+//Ejercicio Practica 
+//Integrantes: Agustin Carro, Carlos Rodriguez, Diego Monti, Tomas Pistarelli
+
+
+
 #ifndef ARBOLES_ARBOL_H
-	#define ARBOLES_ARBOL_H
-	#include <vector>
-	#include "queue.h"
-	#include <iostream>
+#define ARBOLES_ARBOL_H
+#include <vector>
+#include "queue.h"
+#include <iostream>
+using namespace std;
+			
+		//DECLARACION DE DATOS 
+ 
 	
-	
-	using namespace std;
-	
+
 	struct Nodo {
 	int dato;
 	Nodo *der;
@@ -15,7 +23,7 @@
 	};
 	
 	
-	class Arbol {
+	class Arbol {						//ASIGNAMOS PARAMETROS A LAS FUNCIONES
 	
 	public:
 	Arbol();
