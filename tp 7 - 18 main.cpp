@@ -1,3 +1,6 @@
+// Created by carlos,tomas on 11/09/18.
+//Ejercicio Practica 
+//Integrantes: Agustin Carro, Carlos Rodriguez, Diego Monti, Tomas Pistarelli
 #include <fstream>
 #include "Arbol.h"
 #include <iostream>
