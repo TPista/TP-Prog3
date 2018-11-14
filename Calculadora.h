@@ -1,6 +1,6 @@
-//
 // Created by agustin on 07/09/18.
-//
+//Ejercicio Practica 3 - 11
+//Integrantes: Agustin Carro, Carlos Rodriguez, Diego Monti, Tomas Pistarelli
 #include <iostream>
 
 using namespace std;
