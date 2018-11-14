@@ -6,83 +6,46 @@
 	
 	using namespace std;
 	
-	
-	/*
-	
-	ARBOL 7 ej 18
-	
-	Ejercicio 18
-	Hacer una clase de aplicación que contenga:
-	Los -métodos correspondientes a los algoritmos de los ejercicios 13 y 14.
-	Los métodos que muestran el árbol:
-	en preorden.
-	en inorden.
-	en postorden.
-	por niveles.
-	Médoto que guarde árbol en disco.
-	Método que recupere el árbol del disco.
-	Hacer un programa de prueba.
-	
-	
-	Ejercicio 13
-	Utilizando las primitivas de árbol binario escribir los métodos para calcular:
-	a) el peso.
-	b) el número de hojas.
-	c) el número de veces que aparece un elemento dado.
-	d) el número de elementos que tienen el árbol en un nivel dado.
-	e) la altura.
-	
-	
-	Ejercicio 14
-	a) Se dispone de un árbol binario de elementos de tipo entero. Escribir métodos que calculen:
-	i) la suma de sus elementos.
-	ii) la suma de sus elementos que son múltiplos de 3.
-	
-	*/
-	
-	
-	
 	int main() {
 	Arbol a = Arbol();
 	Nodo *arbol = nullptr;
 	int dato, opcion, contador = 0;
 	
-	a.insertarNodo(arbol, 1, nullptr);
-	a.insertarNodo(arbol, 3, nullptr);
-	a.insertarNodo(arbol, 3, nullptr);
 	a.insertarNodo(arbol, 2, nullptr);
 	a.insertarNodo(arbol, 4, nullptr);
+	a.insertarNodo(arbol, 4, nullptr);
+	a.insertarNodo(arbol, 4, nullptr);
+	a.insertarNodo(arbol, 3, nullptr);
 	
 	do {
-	cout << "--------------------------------------------- MENU ---------------------------------------------"
+	
 	<< endl;
-	cout << "1. Insertar nuevo nodo." << endl;
-	cout << "2. Mostrar árbol completo." << endl;
-	cout << "--------------------------------------------- EJ 13" << endl;
-	cout << "3. El peso.\n"
-	"4. El número de hojas.\n"
-	"5. El número de veces que aparece un elemento dado.\n"
-	"6. El número de elementos que tiene el árbol en un nivel dado.\n"
-	"7. La altura." << endl;
-	cout << "--------------------------------------------- EJ 14" << endl;
+	cout << "1-Agregar nuevo nodo" << endl;
+	cout << "2-Mostrar arbol completo" << endl;
+	cout << "ejercicio 13" << endl;
+	cout << "3- El peso.\n"
+	"4- El número de hojas.\n"
+	"5- El número de veces que aparece un elemento dado.\n"
+	"6-  El número de elementos que tiene el árbol en un nivel dado.\n"
+	"7- La altura." << endl;
+	cout << "ejercicio 14" << endl;
 	cout << "8. La suma de sus elementos.\n"
 	"9. La suma de sus elementos que son múltiplos de 3." << endl;
-	cout << "--------------------------------------------- EJ 18" << endl;
+	cout << "ejercicio 18" << endl;
 	cout << "10. Mostrar arbol en preorden.\n"
-	"11. Mostrar arbol en inorden.\n"
-	"12. Mostrar arbol en postorden.\n"
-	"13. Mostrar arbol por niveles.\n"
-	"14. Médoto que guarde árbol en disco.\n"
-	"15. Método que recupere el árbol del disco.\n"
-	"0. Salir" << endl;
-	cout << "------------------------------------------------------------------------------------------------"
+	"11- Mostrar arbol en inorden.\n"
+	"12- Mostrar arbol en postorden.\n"
+	"13- Mostrar arbol por niveles.\n"
+	"14- Médoto que guarde árbol en disco.\n"
+	"15- Método que recupere el árbol del disco.\n"
+	"0- Abnadonar" << endl;
 	<< endl;
-	cout << "Seleccionar opción: ";
+	cout << "Seleccionar alguna opción: ";
 	cin >> opcion;
 	
 	switch (opcion) {
 	case 1:
-	cout << "Ingrese número: ";
+	cout << "Ingrese  un número: ";
 	cin >> dato;
 	a.insertarNodo(arbol, dato, nullptr);
 	cout << "\n";
