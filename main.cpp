@@ -20,14 +20,14 @@ int main() {
         numeros [pos] = aux;
     }
 
-    cout<<"Ascendente Inserción : ";
+    cout<<"Ascendente Inserción : "; //comienzo a recorrer de manera ascendente
     for(i=0;i<5;i++){
 
         cout<<numeros[i]<<" ";
     }
 
 
-    cout<< "\nDescendente Inserción: ";
+    cout<< "\nDescendente Inserción: "; //comienzo a recorrer de forma descendente
     for(i=4; i>=0; i--){
 
         cout<<numeros[i]<< " ";
