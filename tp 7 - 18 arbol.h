@@ -42,7 +42,7 @@ using namespace std;
 	return nuevo_nodo;
 	}
 	
-	void Arbol::mostrarArbol (Nodo *arbol, int cont) { //creamo una funcion para mostrar dicho arbol
+	void Arbol::mostrarArbol (Nodo *arbol, int cont) { //creamos una funcion para mostrar dicho arbol
 	if (arbol == nullptr) {	
 	return;
 	}
