@@ -1,12 +1,15 @@
+#include <fstream>
+#include "Arbol.h"
 #include <iostream>
-	#include <vector>
-	#include <stdlib.h>
-	#include "Arbol.h"
-	#include <fstream>
+#include <stdlib.h>
+#include <vector>
+
+
+
+
+using namespace std;
 	
-	using namespace std;
-	
-	int main() {
+	int main() {					//DECLARACION DE ARBOLES
 	Arbol a = Arbol();
 	Nodo *arbol = nullptr;
 	int dato, opcion, contador = 0;
@@ -17,7 +20,7 @@
 	a.insertarNodo(arbol, 4, nullptr);
 	a.insertarNodo(arbol, 3, nullptr);
 	
-	do {
+	do {						//MENU DE OPCIONES
 	
 	<< endl;
 	cout << "1-Agregar nuevo nodo" << endl;
@@ -43,7 +46,7 @@
 	cout << "Seleccionar alguna opción: ";
 	cin >> opcion;
 	
-	switch (opcion) {
+	switch (opcion) {							//INGRESAR CASOS
 	case 1:
 	cout << "Ingrese  un número: ";
 	cin >> dato;
