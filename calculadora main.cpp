@@ -1,3 +1,6 @@
+//TP CALCULADORA
+//INTEGRANTES: CARRO,AGUSTÌN ; CARLOS, RODRIGUEZ ; TOMAS, PISTARELLI ; DIEGO, MONTI.
+
 #include <cstdlib>
 #include <iostream>
 #include <string>
