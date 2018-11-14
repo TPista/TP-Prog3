@@ -1,0 +1,12 @@
+Ejercicio 18 (entregar)
+Hacer una clase de aplicación que contenga:
+Los métodos correspondientes a los algoritmos de los ejercicios 13 y14.
+Los métodos que muestran el árbol:
+en preorden.
+en inorden.
+en postorden.
+por niveles.
+
+Médoto que guarde árbol en disco.
+Método que recupere el árbol del disco.
+Hacer un programa de prueba.
