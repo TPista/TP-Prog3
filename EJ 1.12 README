@@ -6,3 +6,15 @@ Los datos pueden ser números enteros, strings o estructuras más complejas. Est
 conoce en inglés como sorting. Algunos algoritmos básicos son selección, inserción, y burbujeo. Hay
 otros más complejos pero más eficientes como por ejemplo quicksort.
 a) Describir los algoritmos de selección, inserción, burbujeo y quicksort
+b) Estudiar la complejidad.
+c) Codificarlos.
+d) Generar en forma random un arreglo de números enteros para distintos valores de N (siendo N el
+tamaño del arreglo) y comparar los tiempos para distintos valores de N. Comparar los resultados
+obtenidos con los esperados según el punto b.
+e) Modificar los algoritmos anteriores para que ordenen cadenas. Observar que hay que realizar
+muy pocos cambios.
+f) Modificar los algoritmos de manera que ordenen cualquier tipo de dato (no sólo simples sino
+también compuestos, como por ejemplo debemos ordenar aviones por compañía y nro de avión).
+g) Buscar temas afines en Internet (hay páginas muy interesantes).
+h) Desarrollar la versión recursiva del método de selección y compararla en tiempo y espacio con la
+iterativa.
