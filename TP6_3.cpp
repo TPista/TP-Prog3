@@ -1,6 +1,6 @@
-//
 // Created by pista on 17/10/18.
-//
+//Ejercicio Practica 6 - 3
+//Integrantes: Agustin Carro, Carlos Rodriguez, Diego Monti, Tomas Pistarelli
 
 #include <fstream>
 #include <iostream>
@@ -18,7 +18,7 @@ struct ListNode {
     ListNode *next;
 };
 
-void LinkedList::deleteList(ListNode *front) {
+void LinkedList::deleteList(ListNode *front) { //Metodo borrar lis
     ListNode *next;
     for (ListNode *ptr = front; ptr != nullptr; ptr = next) {
         next = ptr->next;
@@ -95,7 +95,7 @@ void addToFront(int elem1,int elem2,int elem3, ListNode* &front) {
 
 int main () {
 
-    ListNode* front;// = ListNode; //new ListNode;
+    ListNode* front;
 
 
     int nlinea, ninterno, cantasientos;
@@ -104,7 +104,7 @@ int main () {
     int opcion;
 
 
-    fd = open("archivo.txt", O_CREAT | O_WRONLY);
+    fd = open("archivo.txt", O_CREAT | O_WRONLY); //Creacion y posterior verificacion de archivo
 
 
     if (fd == NULL){
@@ -115,12 +115,12 @@ int main () {
           //  write(fd, "HOLA ", 13);
           close(fd);
     }
-    //removeIndex(front,0);
+   
     addToFront(1, 1, 50, front);
     addToFront(1, 2, 45, front);
 
 
-    while (!inicio){
+    while (!inicio){ //Menu seleccion de funciones
 
         cout<<("1. Agregar bondi")<<endl;
         cout<<("2. Mostrar bondi")<<endl;
@@ -132,7 +132,6 @@ int main () {
             case 1: {
                 printf("Ingrese numero de linea: ");
                 scanf("%d", &nlinea);
-                //write(fd, &nlinea, 13);
 
                 printf("I2ngrese numero de interno: ");
                 scanf("%d", &ninterno);
