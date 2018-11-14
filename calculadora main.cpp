@@ -13,18 +13,6 @@ int precedences[N_operators] = {1, 1, 2, 2, 2, 3};
 bool operador( const string );
 int precedencia( const string );
 
-/* Mis sugerencias personales a este programa:
- *
- * - Considerar el cambio del nombre standby por aux_stack, u otro.
- * - Incorporar el analizador lexico para expresiones numericas de punto
- *   flotante, o que ocupen mas de un caracter.
- * - Eliminar la cadena intermedia postfix, pasando directamente los
- *   resultados de la pila de operadores extraidos de infix, a una pila
- *   de evaluacion.
- * - Incorporar operadores unarios, como sin(), cos(), exp(), log(), etc.
- * - Detectar errores de sintaxis en la expresion infija.
- * - Otros que sean recomendados.
- */
 
 int main() {
 
@@ -48,8 +36,7 @@ int main() {
          * el analizador léxico */
         c = infijo[i];
         token.clear();
-        token += c;			/* parece burdo, pero no conozco mejor manera de
-    								 * crear un string a partir de un unico caracter */
+        token += c;			
 
         /* es un espacio: despreciar */
         if ( c == ' ' ) continue;
