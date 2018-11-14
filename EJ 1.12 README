@@ -1,0 +1,8 @@
+EJERCICIO 1.12
+
+Ejercicio 12
+Un problema muy frecuente es ordenar un conjunto de datos en forma ascendente o descendente.
+Los datos pueden ser números enteros, strings o estructuras más complejas. Este problema se
+conoce en inglés como sorting. Algunos algoritmos básicos son selección, inserción, y burbujeo. Hay
+otros más complejos pero más eficientes como por ejemplo quicksort.
+a) Describir los algoritmos de selección, inserción, burbujeo y quicksort
