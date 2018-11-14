@@ -1,13 +1,12 @@
 // Created by carlos on 07/11/18.
 //Ejercicio Practica 3 - 11
 //Integrantes: Agustin Carro, Carlos Rodriguez, Diego Monti, Tomas Pistarelli
-
-#include <iostream>
-#include "Arbol.h"
-#include "queue.h"
-#include <iostream>
-#include <fstream>
 #include <vector>
+#include <iostream>
+#include <iostream>
+#include "queue.h"
+#include "Arbol.h"
+#include <fstream>
 using namespace std;
 	
 	
@@ -93,7 +92,7 @@ using namespace std;
 	delete nodo;
 	}
 	
-	void Arbol::reemplazar (Nodo *arbol, Nodo *nuevoNodo){ //fuincio de reemplazo (update)
+	void Arbol::reemplazar (Nodo *arbol, Nodo *nuevoNodo){ //funcion de reemplazo (update)
 	if(arbol->padre){
 	//arbol→padre hay que asignarle su nuevo hijo
 	if(arbol->dato == arbol->padre->izq->dato){
@@ -296,6 +295,6 @@ using namespace std;
 	}
 	myfile.close();
 	}
-	else cout << "Archivo no encontrado";
+	else cout << "No existe archivo";
 	
 	} 
