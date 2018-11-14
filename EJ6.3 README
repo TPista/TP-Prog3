@@ -1,0 +1,18 @@
+EJERCICIO 6.3
+
+Ejercicio 3
+Censo de Colectivos
+La Secretaría de Transporte ha decidido hacer un estudio sobre la calidad de los colectivos de la
+ciudad de Buenos Aires. Cada colectivo tiene como atributos número de línea, número de interno,
+cantidad de asientos y si es apto para discapacitados. Cada colectivo se identifica con el número de
+línea y número de interno.
+Se solicita hacer un sistema que a través de un menú permita (la información debe estar almacenada
+en una lista ordenada) :
+1. Agregar colectivos
+2. Eliminar colectivos
+3. Obtener un informe ordenado por número de línea y para una misma línea por número de
+interno.
+4. Informar cuantos colectivos aptos para discapacitados hay por línea.
+5. Informar cuantos colectivos con más de 27 asientos hay por línea.
+6. Guardar la lista en un archivo.
+7. Recuperar la lista de un archivo.
