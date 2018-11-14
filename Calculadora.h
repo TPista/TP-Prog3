@@ -12,11 +12,11 @@ class Calculadora {
 
 public:
 
-    void suma (int a, int b){
+    void suma (int a, int b){                   //delclaracion de operaciones suma
         cout<<"la suma es=" <<a+b<< endl;
     }
 
-    void resta (int a, int b){
+    void resta (int a, int b){                  //delclaracion de operaciones resta    
         if(a>b){
             cout<<"Ladivision es="<<a-b<<endl;
         }if(b>a){
@@ -24,12 +24,12 @@ public:
         }
     }
 
-    void multiplicacion(int a, int b){
+    void multiplicacion(int a, int b){              //delclaracion de operaciones multiplicacion
 
         cout<<"La multiplicacion es="<<a*b<<endl;
     }
 
-    void division (int a, int b){
+    void division (int a, int b){                   //delclaracion de operaciones division
         if(a>b){
             cout<< "La division es="<<a/b<<endl;
         }if(b>a){
