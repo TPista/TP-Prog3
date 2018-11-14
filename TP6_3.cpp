@@ -13,7 +13,7 @@
 
 using namespace std;
 
-struct ListNode {
+struct ListNode { //Creacion de lista de datos
     int nlinea, ninterno, cantasientos;
     ListNode *next;
 };
@@ -29,7 +29,7 @@ void LinkedList::deleteList(ListNode *front) { //Metodo borrar lis
 
 
 
-void removeIndex(ListNode *&front, int index) {
+void removeIndex(ListNode *&front, int index) { //Borrar los indices basura
 
     if (front == nullptr) {
 
@@ -74,7 +74,7 @@ void removeIndex(ListNode *&front, int index) {
 
 
 
-void printList(ListNode *front) {
+void printList(ListNode *front) { //Metodo para mostrar la lista
 
     for (ListNode *ptr = front; ptr != nullptr; ptr = ptr->next) {
         cout << ptr->nlinea <<endl;
@@ -86,7 +86,7 @@ void printList(ListNode *front) {
 
 
 
-void addToFront(int elem1,int elem2,int elem3, ListNode* &front) {
+void addToFront(int elem1,int elem2,int elem3, ListNode* &front) { //Ordenar los elementos
     front = new ListNode{elem1,elem2,elem3, front};
 
     }
