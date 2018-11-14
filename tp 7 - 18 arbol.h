@@ -1,5 +1,5 @@
-// Created by carlos on 07/11/18.
-//Ejercicio Practica 3 - 11
+// Created by carlos,tomas on 10/11/18.
+//Ejercicio Practica 
 //Integrantes: Agustin Carro, Carlos Rodriguez, Diego Monti, Tomas Pistarelli
 #include <vector>
 #include <iostream>
@@ -10,9 +10,9 @@
 using namespace std;
 	
 	
+	//creamos un nuevo nodo
 	
-	
-	void Arbol::insertarNodo (Nodo *&arbol, int n, Nodo *padre) { //creamos un nuevo nodo
+	void Arbol::insertarNodo (Nodo *&arbol, int n, Nodo *padre) { 
 	if (arbol == nullptr) {
 	Nodo *nuevo_nodo = crearNodo(n, padre);
 	arbol = nuevo_nodo;
