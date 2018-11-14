@@ -1,26 +1,14 @@
 #include "Arbol.h"
-	#include "queue.h"
-	#include <iostream>
-	#include <fstream>
-	#include <vector>
-	
-	using namespace std;
-	
-	Arbol::Arbol(){};
-	
-	Nodo * Arbol::crearNodo (int n, Nodo *padre){
-	Nodo *nuevo_nodo = new Nodo();
-	
-	nuevo_nodo->dato = n;
-	nuevo_nodo->der = nullptr;
-	nuevo_nodo->izq = nullptr;
-	nuevo_nodo->padre = padre;
-	
-	return nuevo_nodo;
-	}
+#include "queue.h"
+#include <iostream>
+#include <fstream>
+#include <vector>
+using namespace std;
 	
 	
-	void Arbol::insertarNodo (Nodo *&arbol, int n, Nodo *padre) {
+	
+	
+	void Arbol::insertarNodo (Nodo *&arbol, int n, Nodo *padre) { //creamos un nuevo nodo
 	if (arbol == nullptr) {
 	Nodo *nuevo_nodo = crearNodo(n, padre);
 	arbol = nuevo_nodo;
@@ -36,9 +24,21 @@
 	}
 	}
 	
+	Arbol::Arbol(){};					//creamos un arbol
 	
-	void Arbol::mostrarArbol (Nodo *arbol, int cont) {
-	if (arbol == nullptr) {
+	Nodo * Arbol::crearNodo (int n, Nodo *padre){
+	Nodo *nuevo_nodo = new Nodo();
+	
+	nuevo_nodo->dato = n;
+	nuevo_nodo->der = nullptr;
+	nuevo_nodo->izq = nullptr;
+	nuevo_nodo->padre = padre;
+	
+	return nuevo_nodo;
+	}
+	
+	void Arbol::mostrarArbol (Nodo *arbol, int cont) { //creamo una funcion para mostrar dicho arbol
+	if (arbol == nullptr) {	
 	return;
 	}
 	else {
@@ -52,19 +52,8 @@
 	}
 	
 	
-	bool Arbol::busqueda (Nodo *arbol, int n) {
-	if (arbol == nullptr) {
-	return false;
-	} else if (arbol->dato == n) {
-	return true;
-	} else if (n < arbol->dato) {
-	return busqueda(arbol->izq, n);
-	} else {
-	return busqueda(arbol->der, n);
-	}
-	}
 	
-	Nodo *Arbol::minimo(Nodo *arbol){
+	Nodo *Arbol::minimo(Nodo *arbol){    //creamos una funcion para el minimo
 	if(arbol == nullptr){
 	return nullptr;
 	}
@@ -76,14 +65,30 @@
 	}
 	}
 	
-	void Arbol::destruirNodo(Nodo *nodo){
+
+
+	
+	bool Arbol::busqueda (Nodo *arbol, int n) { //creamos una funcion para la busqueda en el arbol
+	if (arbol == nullptr) {
+	return false;
+	} else if (arbol->dato == n) {
+	return true;
+	} else if (n < arbol->dato) {
+	return busqueda(arbol->izq, n);
+	} else {
+	return busqueda(arbol->der, n);
+	}
+	}
+	
+
+	void Arbol::destruirNodo(Nodo *nodo){ // funcion para borrado
 	nodo->izq = nullptr;
 	nodo->der = nullptr;
 	
 	delete nodo;
 	}
 	
-	void Arbol::reemplazar (Nodo *arbol, Nodo *nuevoNodo){
+	void Arbol::reemplazar (Nodo *arbol, Nodo *nuevoNodo){ //fuincio de reemplazo (update)
 	if(arbol->padre){
 	//arbol→padre hay que asignarle su nuevo hijo
 	if(arbol->dato == arbol->padre->izq->dato){
@@ -93,7 +98,7 @@
 	arbol->padre->der = nuevoNodo;
 	}
 	}
-	if(nuevoNodo){
+	if(nuevoNodo){				//agregar nuevo nodo
 	//Asignamos su nuevo padre
 	nuevoNodo->padre = arbol->padre;
 	}
@@ -173,14 +178,14 @@
 	return sum;
 	}
 	
-	int Arbol::peso (Nodo *arbol) {
+	int Arbol::peso (Nodo *arbol) { 			//Devuelve el peso del arbol
 	if(!arbol)
 	return 0;
 	else
 	return peso(arbol->izq) + 1 + peso(arbol->der);
 	}
 	
-	int Arbol::contarHojas(struct Nodo* node) {
+	int Arbol::contarHojas(struct Nodo* node) {		//numero de hojas
 	if(node == NULL)
 	return 0;
 	if(node->izq == NULL && node->der==NULL)
@@ -202,7 +207,7 @@
 	}
 	}
 	
-	void Arbol:: preOrden(Nodo* node) {
+	void Arbol:: preOrden(Nodo* node) {		//preorden	
 	if ( node ) {
 	cout << node->dato << " ";
 	preOrden(node->izq);
@@ -210,7 +215,7 @@
 	}
 	}
 	
-	void Arbol:: inOrden(Nodo* Root) {
+	void Arbol:: inOrden(Nodo* Root) {     		//inorden
 	if(Root != NULL) {
 	inOrden(Root->izq);
 	cout << Root->dato << " ";
@@ -218,7 +223,7 @@
 	}
 	}
 	
-	void Arbol:: postOrden(Nodo* Root) {
+	void Arbol:: postOrden(Nodo* Root) {		//portorden
 	if(Root != NULL) {
 	postOrden(Root->izq);
 	postOrden(Root->der);
@@ -228,7 +233,7 @@
 	}
 	
 	
-	void Arbol::printGivenLevel(struct Nodo* root, int level) {
+	void Arbol::printGivenLevel(struct Nodo* root, int level) { 
 	if (root == NULL)
 	return;
 	if (level == 1)
@@ -239,7 +244,7 @@
 	}
 	}
 	
-	int Arbol::altura(Nodo* arbol) {
+	int Arbol::altura(Nodo* arbol) {					//altura de arbol
 	if (arbol == nullptr) return 0;
 	return max(altura(arbol->izq), altura(arbol->der)) + 1;
 	}
