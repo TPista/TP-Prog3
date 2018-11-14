@@ -93,12 +93,12 @@ void addToFront(int elem1,int elem2,int elem3, ListNode* &front) { //Ordenar los
 
 
 
-int main () {
+int main () { // funcion principal 
 
     ListNode* front;
 
 
-    int nlinea, ninterno, cantasientos;
+    int nlinea, ninterno, cantasientos; //declaracion numeros e inicio
     int fd;
     int inicio=0;
     int opcion;
