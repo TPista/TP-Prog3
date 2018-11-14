@@ -7,7 +7,7 @@ project(TP-Prog3)
 set(CMAKE_CXX_STANDARD 11)
 
 
-
+//directorio
 include_directories(/usr/local/include/StanfordCPPLib/)
 
 
